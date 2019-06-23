@@ -1,0 +1,51 @@
+using UnityEngine;
+
+public class SceneManager : SingletonMonoBehaviour<SceneManager>
+{
+    [SerializeField] private TitlePanel _titlePanel;
+    [SerializeField] private StudyPanel _studyPanel;
+    [SerializeField] private TestPanel _testPanel;
+
+    private GameObject _activePanel;
+
+    protected override void Init()
+    {
+        base.Init();
+
+        ShowTitlePanel();
+    }
+
+    private void SetActivePanel(GameObject panel)
+    {
+        if (_activePanel != null)
+        {
+            _activePanel.SetActive(false);
+        }
+
+        _activePanel = panel;
+        _activePanel.SetActive(true);
+    }
+
+    public void ShowTitlePanel()
+    {
+        SetActivePanel(_titlePanel.gameObject);
+        _titlePanel.Show();
+    }
+
+    public void ShowStudyPanel()
+    {
+        SetActivePanel(_studyPanel.gameObject);
+        _studyPanel.Show();
+    }
+
+    public void ShowTestPanel()
+    {
+        SetActivePanel(_testPanel.gameObject);
+        _testPanel.Show();
+    }
+
+    public void OnHomeButtonClick()
+    {
+        ShowTitlePanel();
+    }
+}
