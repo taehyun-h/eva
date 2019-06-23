@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneManager : SingletonMonoBehaviour<SceneManager>
@@ -12,18 +13,8 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     {
         base.Init();
 
+        LoadWordData();
         ShowTitlePanel();
-    }
-
-    private void SetActivePanel(GameObject panel)
-    {
-        if (_activePanel != null)
-        {
-            _activePanel.SetActive(false);
-        }
-
-        _activePanel = panel;
-        _activePanel.SetActive(true);
     }
 
     public void ShowTitlePanel()
@@ -44,8 +35,47 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
         _testPanel.Show();
     }
 
+    private void SetActivePanel(GameObject panel)
+    {
+        if (_activePanel != null)
+        {
+            _activePanel.SetActive(false);
+        }
+
+        _activePanel = panel;
+        _activePanel.SetActive(true);
+    }
+
+    #region Word Data
+
+    private const string WordDataJsonPath = "WordData";
+
+    private List<WordData> _wordData;
+
+    private void LoadWordData()
+    {
+        var text = Resources.Load<TextAsset>(WordDataJsonPath).text;
+        _wordData = JsonUtil.DeserializeObject<List<WordData>>(text);
+    }
+
+    public int GetWordDataCount()
+    {
+        return _wordData.Count;
+    }
+
+    public WordData GetWordData(int index)
+    {
+        return _wordData[index];
+    }
+
+    #endregion
+
+    #region Unity Button
+
     public void OnHomeButtonClick()
     {
         ShowTitlePanel();
     }
+
+    #endregion
 }
