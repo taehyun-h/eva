@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class SingletonMonoBehaviour<TypeName> : MonoBehaviour where TypeName : SingletonMonoBehaviour<TypeName>
+public class SingletonMonoBehaviour<TypeName> : MonoBehaviour
+    where TypeName : SingletonMonoBehaviour<TypeName>
 {
     public static TypeName Instance => _instance;
     private static TypeName _instance;
