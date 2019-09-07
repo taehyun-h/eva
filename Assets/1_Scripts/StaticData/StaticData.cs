@@ -18,7 +18,7 @@ public class StaticData : Singleton<StaticData>
 
     #region WordData
 
-    private const string WordDataJsonPath = "WordData";
+    private const string WordDataJsonPath = "StaticData/WordData";
 
     private readonly Dictionary<string, WordData> _wordData = new Dictionary<string, WordData>();
 
