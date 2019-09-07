@@ -25,14 +25,14 @@ public class StudyPanel : MonoBehaviour
 
     private void SetWordData(WordData wordData)
     {
-        _word.text = wordData.Word;
+        _word.text = wordData.Spelling;
 
         var i = 0;
-        var length = Math.Min(wordData.Means.Length, _means.Length);
+        var length = Math.Min(wordData.Meanings.Length, _means.Length);
         for (i = 0; i < length; i++)
         {
             _means[i].gameObject.SetActive(true);
-            _means[i].text = wordData.Means[i];
+            _means[i].text = wordData.Meanings[i];
         }
 
         for (; i < _means.Length; i++)
