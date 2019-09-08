@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StaticData : Singleton<StaticData>
@@ -19,7 +20,7 @@ public class StaticData : Singleton<StaticData>
 
     #region WordData
 
-    private const string WordDataJsonPath = "StaticData/WordData";
+    private const string WordDataPath = "StaticData/WordData";
 
     private readonly Dictionary<int, WordData> _wordData = new Dictionary<int, WordData>();
 
@@ -30,11 +31,24 @@ public class StaticData : Singleton<StaticData>
 
     private void LoadWordData()
     {
-        var text = Resources.Load<TextAsset>(WordDataJsonPath).text;
-        var wordData = JsonUtil.DeserializeObject<List<WordData>>(text);
-        foreach (var word in wordData)
+        var text = Resources.Load<TextAsset>(WordDataPath).text;
+        var allWordData = text.Split('\n');
+        for (var id = 1; id <= allWordData.Length; id++)
         {
-            _wordData[word.Id] = word;
+            var wordData = allWordData[id - 1].Split(':');
+            if (wordData.Length == 0) continue;
+
+            for (var i = 0; i < wordData.Length; i++)
+            {
+                wordData[i] = wordData[i].Trim();
+            }
+
+            _wordData[id] = new WordData
+            {
+                Id = id,
+                Spelling = wordData[0],
+                Meanings = wordData.Length == 1 ? new string[] { } : wordData.Skip(1).ToArray(),
+            };
         }
     }
 
