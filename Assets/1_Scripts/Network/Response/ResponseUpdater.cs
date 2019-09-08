@@ -6,7 +6,7 @@ public class ResponseUpdater : Singleton<ResponseUpdater>
         {
             case SignInResponse signInResponse:
             {
-                // TODO
+                User.Instance.OnUpdate(signInResponse);
                 break;
             }
             default:
