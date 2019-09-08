@@ -1,12 +1,12 @@
 using System;
-using UnityEngine;
 
 public class SignInRequest : Request
 {
     protected override TResponse GetResponse<TResponse>()
     {
-        var protocolUser = GetProtocolUser();
-        UpdateProtocolUser(protocolUser);
+        var protocolUser = Server.Instance.GetProtocolUser();
+        UpdateSignIn(protocolUser);
+        Server.Instance.SaveProtocolUser();
 
         var response = new SignInResponse
         {
@@ -15,13 +15,7 @@ public class SignInRequest : Request
         return response as TResponse;
     }
 
-    private ProtocolUser GetProtocolUser()
-    {
-        var text = Resources.Load<TextAsset>("ServerData/ProtocolUser").text;
-        return JsonUtil.DeserializeObject<ProtocolUser>(text);
-    }
-
-    private void UpdateProtocolUser(ProtocolUser protocolUser)
+    private void UpdateSignIn(ProtocolUser protocolUser)
     {
         var now = DateTime.Now;
         var isFirstLoginToday = now.Year != protocolUser.LastSignInTime.Year || now.DayOfYear != protocolUser.LastSignInTime.DayOfYear;
