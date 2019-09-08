@@ -15,10 +15,11 @@ public class StudyPanel : MonoBehaviour
 
     private void SetNextWord()
     {
-        _index.text = $"{User.Instance.TodayStudyWordsIndex + 1} / {User.Instance.TodayStudyWords.Count}";
-        SetWordData(User.Instance.TodayStudyWords[User.Instance.TodayStudyDate][User.Instance.TodayStudyWordsIndex]);
+        var todayStudyWords = User.Instance.TodayStudyWords[User.Instance.TodayStudyDate];
+        _index.text = $"{User.Instance.TodayStudyWordsIndex + 1} / {todayStudyWords.Count}";
 
-        // TODO : study word request
+        var id = todayStudyWords[User.Instance.TodayStudyWordsIndex];
+        SetWordData(id);
     }
 
     private void SetWordData(int id)
@@ -42,6 +43,8 @@ public class StudyPanel : MonoBehaviour
 
     public void OnBackgroundButtonClick()
     {
+        RequestSender.Instance.StudyWord();
+
         SetNextWord();
     }
 }

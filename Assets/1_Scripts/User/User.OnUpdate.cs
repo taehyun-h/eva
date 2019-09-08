@@ -9,6 +9,11 @@ public partial class User
         OnUpdate(response.ProtocolUser);
     }
 
+    public void OnUpdate(StudyWorkResponse response)
+    {
+        OnUpdate(response.ProtocolUser);
+    }
+
     #endregion
 
     private void OnUpdate(ProtocolUser protocolUser)
