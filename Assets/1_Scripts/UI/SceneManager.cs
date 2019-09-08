@@ -46,28 +46,6 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
         _activePanel.SetActive(true);
     }
 
-    #region Word Data
-
-    private const string WordDataJsonPath = "WordData";
-
-    private List<WordData> _wordData;
-
-    private void LoadWordData()
-    {
-        var text = Resources.Load<TextAsset>(WordDataJsonPath).text;
-        _wordData = JsonUtil.DeserializeObject<List<WordData>>(text);
-    }
-
-    public int GetWordDataCount()
-    {
-        return _wordData.Count;
-    }
-
-    public WordData GetWordData(int index)
-    {
-        return _wordData[index];
-    }
-
     #endregion
 
     #region Unity Button

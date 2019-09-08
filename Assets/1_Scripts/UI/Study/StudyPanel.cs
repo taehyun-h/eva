@@ -7,20 +7,17 @@ public class StudyPanel : MonoBehaviour
     [SerializeField] private Text _word;
     [SerializeField] private Text[] _means;
 
-    private int _wordDataIndex;
-
     public void Show()
     {
-        _wordDataIndex = 0;
-
         SetNextWord();
     }
 
     private void SetNextWord()
     {
-        SetWordData(SceneManager.Instance.GetWordData(_wordDataIndex));
+        var wordId = User.Instance.TodayStudyWords[User.Instance.TodayStudyWordsIndex];
+        SetWordData(StaticData.Instance.GetWorldData(wordId));
 
-        _wordDataIndex = (_wordDataIndex + 1) % SceneManager.Instance.GetWordDataCount();
+        // TODO : study word request
     }
 
     private void SetWordData(WordData wordData)

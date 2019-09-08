@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class StaticData : Singleton<StaticData>
 {
+    public const int NewStudyWordCount = 30;
     public static readonly int[] StudyPeriodDate = {2, 3, 5};
     public static readonly int[] TestPeriodDate = {5, 10, 20};
 
@@ -20,7 +21,12 @@ public class StaticData : Singleton<StaticData>
 
     private const string WordDataJsonPath = "StaticData/WordData";
 
-    private readonly Dictionary<string, WordData> _wordData = new Dictionary<string, WordData>();
+    private readonly Dictionary<int, WordData> _wordData = new Dictionary<int, WordData>();
+
+    public WordData GetWorldData(int id)
+    {
+        return _wordData.TryGetValue(id, out var wordData) ? wordData : null;
+    }
 
     private void LoadWordData()
     {
@@ -28,7 +34,7 @@ public class StaticData : Singleton<StaticData>
         var wordData = JsonUtil.DeserializeObject<List<WordData>>(text);
         foreach (var word in wordData)
         {
-            _wordData[word.Spelling] = word;
+            _wordData[word.Id] = word;
         }
     }
 
