@@ -6,6 +6,7 @@ public class StudyPanel : MonoBehaviour
 {
     [SerializeField] private Text _word;
     [SerializeField] private Text[] _means;
+    [SerializeField] private Text _index;
 
     public void Show()
     {
@@ -14,14 +15,15 @@ public class StudyPanel : MonoBehaviour
 
     private void SetNextWord()
     {
-        var wordId = User.Instance.TodayStudyWords[User.Instance.TodayStudyWordsIndex];
-        SetWordData(StaticData.Instance.GetWorldData(wordId));
+        _index.text = $"{User.Instance.TodayStudyWordsIndex + 1} / {User.Instance.TodayStudyWords.Count}";
+        SetWordData(User.Instance.TodayStudyWords[User.Instance.TodayStudyWordsIndex]);
 
         // TODO : study word request
     }
 
-    private void SetWordData(WordData wordData)
+    private void SetWordData(int id)
     {
+        var wordData = StaticData.Instance.GetWorldData(id);
         _word.text = wordData.Spelling;
 
         var i = 0;
