@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneManager : SingletonMonoBehaviour<SceneManager>
@@ -13,9 +12,22 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     {
         base.Init();
 
-        LoadWordData();
+        InitData();
+        InitUser();
+    }
+
+    private void InitData()
+    {
+        StaticData.Instance.Load();
+    }
+
+    private void InitUser()
+    {
+        RequestSender.Instance.SignIn();
         ShowTitlePanel();
     }
+
+    #region UI
 
     public void ShowTitlePanel()
     {
