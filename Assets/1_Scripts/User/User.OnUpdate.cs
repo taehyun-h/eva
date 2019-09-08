@@ -15,7 +15,7 @@ public partial class User
     {
         TodayStudyDate = protocolUser.TodayStudyDate;
         TodayStudyWordsIndex = protocolUser.TodayStudyWordsIndex;
-        TodayStudyWords = new List<int>(protocolUser.TodayStudyWords);
+        TodayStudyWords = new Dictionary<int, List<int>>(protocolUser.TodayStudyWords);
         WordStudyData = new Dictionary<int, UserWordStudyData>();
         foreach (var (id, data) in protocolUser.WordStudyData)
         {

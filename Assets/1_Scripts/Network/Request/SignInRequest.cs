@@ -45,7 +45,7 @@ public class SignInRequest : Request
                 Id = id,
                 StudyCount = 0,
             };
-            protocolUser.TodayStudyWords.Add(id);
+            protocolUser.AddStudyWord(protocolUser.TodayStudyDate, id);
         }
     }
 }

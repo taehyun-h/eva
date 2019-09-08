@@ -16,7 +16,7 @@ public class StudyPanel : MonoBehaviour
     private void SetNextWord()
     {
         _index.text = $"{User.Instance.TodayStudyWordsIndex + 1} / {User.Instance.TodayStudyWords.Count}";
-        SetWordData(User.Instance.TodayStudyWords[User.Instance.TodayStudyWordsIndex]);
+        SetWordData(User.Instance.TodayStudyWords[User.Instance.TodayStudyDate][User.Instance.TodayStudyWordsIndex]);
 
         // TODO : study word request
     }
