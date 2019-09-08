@@ -6,5 +6,5 @@ public partial class User : Singleton<User>
     public int TodayStudyWordsIndex { get; private set; }
     public List<int> TodayStudyWords { get; private set; }
 
-    public HashSet<UserWordStudyData> WordStudyData { get; private set; }
+    public Dictionary<int, UserWordStudyData> WordStudyData { get; private set; }
 }

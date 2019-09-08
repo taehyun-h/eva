@@ -16,10 +16,10 @@ public partial class User
         TodayStudyDate = protocolUser.TodayStudyDate;
         TodayStudyWordsIndex = protocolUser.TodayStudyWordsIndex;
         TodayStudyWords = new List<int>(protocolUser.TodayStudyWords);
-        WordStudyData = new HashSet<UserWordStudyData>();
-        foreach (var data in protocolUser.WordStudyData)
+        WordStudyData = new Dictionary<int, UserWordStudyData>();
+        foreach (var (id, data) in protocolUser.WordStudyData)
         {
-            WordStudyData.Add(new UserWordStudyData(data));
+            WordStudyData[id] = new UserWordStudyData(data);
         }
     }
 }

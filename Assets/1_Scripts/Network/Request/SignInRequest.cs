@@ -41,12 +41,17 @@ public class SignInRequest : Request
     {
         for (var i = 0; i < StaticData.NewStudyWordCount; i++)
         {
-            var wordData = StaticData.Instance.GetWorldData(protocolUser.LastStudiedWordId + 1);
+            var id = protocolUser.LastStudiedWordId + 1;
+            var wordData = StaticData.Instance.GetWorldData(id);
             if (wordData == null) break;
 
             protocolUser.LastStudiedWordId++;
-            protocolUser.WordStudyData.Add(new ProtocolUserWordStudyData(protocolUser.LastStudiedWordId));
-            protocolUser.TodayStudyWords.Add(protocolUser.LastStudiedWordId);
+            protocolUser.WordStudyData[id] = new ProtocolUserWordStudyData
+            {
+                Id = id,
+                StudyCount = 0,
+            };
+            protocolUser.TodayStudyWords.Add(id);
         }
     }
 }

@@ -11,5 +11,5 @@ public class ProtocolUser
     public List<int> TodayStudyWords = new List<int>();
     
     public int LastStudiedWordId;
-    public HashSet<ProtocolUserWordStudyData> WordStudyData = new HashSet<ProtocolUserWordStudyData>();
+    public Dictionary<int, ProtocolUserWordStudyData> WordStudyData = new Dictionary<int, ProtocolUserWordStudyData>();
 }
