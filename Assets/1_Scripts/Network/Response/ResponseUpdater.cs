@@ -9,9 +9,9 @@ public class ResponseUpdater : Singleton<ResponseUpdater>
                 User.Instance.OnUpdate(signInResponse);
                 break;
             }
-            case StudyWorkResponse studyWorkResponse:
+            case StudyWordResponse studyWordResponse:
             {
-                User.Instance.OnUpdate(studyWorkResponse);
+                User.Instance.OnUpdate(studyWordResponse);
                 break;
             }
             default:

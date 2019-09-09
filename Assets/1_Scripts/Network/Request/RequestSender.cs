@@ -9,6 +9,6 @@ public class RequestSender : Singleton<RequestSender>
     public Request StudyWord()
     {
         var request = new StudyWorkRequest();
-        return request.Send<StudyWorkResponse>();
+        return request.Send<StudyWordResponse>();
     }
 }

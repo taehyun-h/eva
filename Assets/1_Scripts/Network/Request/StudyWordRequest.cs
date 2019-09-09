@@ -6,7 +6,7 @@ public class StudyWorkRequest : Request
         UpdateTodayStudyWordsIndex(protocolUser);
         Server.Instance.SaveProtocolUser();
 
-        var response = new StudyWorkResponse()
+        var response = new StudyWordResponse()
         {
             ProtocolUser = protocolUser
         };

@@ -9,7 +9,7 @@ public partial class User
         OnUpdate(response.ProtocolUser);
     }
 
-    public void OnUpdate(StudyWorkResponse response)
+    public void OnUpdate(StudyWordResponse response)
     {
         OnUpdate(response.ProtocolUser);
     }

@@ -1,4 +1,4 @@
-public class StudyWorkResponse : Response
+public class StudyWordResponse : Response
 {
     public ProtocolUser ProtocolUser;
 }
