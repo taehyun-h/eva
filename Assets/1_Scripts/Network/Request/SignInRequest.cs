@@ -28,8 +28,14 @@ public class SignInRequest : Request
 
         if (isFirstLoginToday)
         {
+            RemoveLastTodayStudyWords(protocolUser);
             UpdateTodayWords(protocolUser);
         }
+    }
+
+    private void RemoveLastTodayStudyWords(ProtocolUser protocolUser)
+    {
+        protocolUser.TodayStudyWords.Remove(protocolUser.TodayStudyDate);
     }
 
     private void UpdateTodayWords(ProtocolUser protocolUser)
