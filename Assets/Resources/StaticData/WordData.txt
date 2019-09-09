@@ -481,3 +481,14 @@ merely : 그저
 configure : (컴퓨터의) 환경을 설정하다
 truncate : (아래나 위를 잘라서) 길이를 줄이다
 conduit : (액체나 기체를 통하게 하는) 도관
+deduct : (돈, 점수 등을) 공제하다[감하다]
+succinctly : 간결하게
+accompany : (일, 현상 등이) 동반되다
+criterion : (판단이나 결정을 위한) 기준
+pledge : (정식으로) 약속[맹세]하다
+oath : 맹세
+nature : 종류
+mutual : (둘 이상 사람들) 공통의
+correspond : ~에 상응하다
+descending
+ascending
