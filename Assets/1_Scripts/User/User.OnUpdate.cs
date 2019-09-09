@@ -19,12 +19,21 @@ public partial class User
     private void OnUpdate(ProtocolUser protocolUser)
     {
         TodayStudyDate = protocolUser.TodayStudyDate;
-        TodayStudyWordsIndex = protocolUser.TodayStudyWordsIndex;
-        TodayStudyWords = new Dictionary<int, List<int>>(protocolUser.TodayStudyWords);
         WordStudyData = new Dictionary<int, UserWordStudyData>();
         foreach (var (id, data) in protocolUser.WordStudyData)
         {
             WordStudyData[id] = new UserWordStudyData(data);
         }
+        WordTestData = new Dictionary<int, UserWordTestData>();
+        foreach (var (id, data) in protocolUser.WordTestData)
+        {
+            WordTestData[id] = new UserWordTestData(data);
+        }
+
+        TodayStudyWordsIndex = protocolUser.TodayStudyWordsIndex;
+        TodayStudyWords = new Dictionary<int, List<int>>(protocolUser.TodayStudyWords);
+
+        TodayTestWordsIndex = protocolUser.TodayTestWordsIndex;
+        TodayTestWords = new Dictionary<int, List<int>>(protocolUser.TodayTestWords);
     }
 }
