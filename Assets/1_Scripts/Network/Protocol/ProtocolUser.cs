@@ -5,13 +5,16 @@ using System.Collections.Generic;
 public class ProtocolUser
 {
     public DateTime LastSignInTime;
-
     public int TodayStudyDate;
+    public int LastStudiedWordId;
+    public Dictionary<int, ProtocolUserWordStudyData> WordStudyData = new Dictionary<int, ProtocolUserWordStudyData>();
+    public Dictionary<int, ProtocolUserWordTestData> WordTestData = new Dictionary<int, ProtocolUserWordTestData>();
+
     public int TodayStudyWordsIndex;
     public Dictionary<int, List<int>> TodayStudyWords = new Dictionary<int, List<int>>();
 
-    public int LastStudiedWordId;
-    public Dictionary<int, ProtocolUserWordStudyData> WordStudyData = new Dictionary<int, ProtocolUserWordStudyData>();
+    public int TodayTestWordsIndex;
+    public Dictionary<int, List<int>> TodayTestWords = new Dictionary<int, List<int>>();
 
     public void AddStudyWord(int date, int id)
     {
