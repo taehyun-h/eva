@@ -7,7 +7,7 @@ public class TestWordIDontKnowRequest : Request
         UpdateTodayTestWord(protocolUser);
         Server.Instance.SaveProtocolUser();
 
-        var response = new TestWordIKnowResponse()
+        var response = new TestWordIDontKnowResponse()
         {
             ProtocolUser = protocolUser
         };
