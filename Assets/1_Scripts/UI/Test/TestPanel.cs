@@ -1,9 +1,13 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TestPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject _done;
+    [SerializeField] private GameObject _test;
+
     [SerializeField] private Text _word;
     [SerializeField] private Text[] _meaningTexts;
     [SerializeField] private Text _index;
@@ -13,6 +17,8 @@ public class TestPanel : MonoBehaviour
     [SerializeField] private GameObject _iKnowButton;
     [SerializeField] private GameObject _iDontKnowButton;
 
+    private List<int> TodayTestWords => User.Instance.TodayTestWords.TryGetValueOrDefaultValue(User.Instance.TodayStudyDate);
+
     public void Show()
     {
         SetNextWord();
@@ -20,6 +26,22 @@ public class TestPanel : MonoBehaviour
 
     private void SetNextWord()
     {
+        if (TodayTestWords == null)
+        {
+            _done.SetActive(true);
+            _test.SetActive(false);
+        }
+        else
+        {
+            SetTest();
+        }
+    }
+
+    private void SetTest()
+    {
+        _done.SetActive(false);
+        _test.SetActive(true);
+
         SetWordIndex();
         SetWordData();
 
