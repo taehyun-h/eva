@@ -19,6 +19,11 @@ public class ResponseUpdater : Singleton<ResponseUpdater>
                 User.Instance.OnUpdate(testWordIKnowResponse);
                 break;
             }
+            case TestWordIDontKnowResponse testWordIDontKnowResponse:
+            {
+                User.Instance.OnUpdate(testWordIDontKnowResponse);
+                break;
+            }
             default:
             {
                 D.Error("Unimplemented response");

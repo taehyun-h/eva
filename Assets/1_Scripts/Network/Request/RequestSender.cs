@@ -17,4 +17,10 @@ public class RequestSender : Singleton<RequestSender>
         var request = new TestWordIKnowRequest();
         return request.Send<TestWordIKnowResponse>();
     }
+
+    public Request TestWordIDontKnow()
+    {
+        var request = new TestWordIDontKnowRequest();
+        return request.Send<TestWordIDontKnowResponse>();
+    }
 }

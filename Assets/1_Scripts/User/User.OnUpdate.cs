@@ -19,6 +19,11 @@ public partial class User
         OnUpdate(response.ProtocolUser);
     }
 
+    public void OnUpdate(TestWordIDontKnowResponse response)
+    {
+        OnUpdate(response.ProtocolUser);
+    }
+
     #endregion
 
     private void OnUpdate(ProtocolUser protocolUser)
