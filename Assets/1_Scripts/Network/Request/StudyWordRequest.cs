@@ -15,7 +15,8 @@ public class StudyWorkRequest : Request
 
     private void UpdateTodayStudyWordsIndex(ProtocolUser protocolUser)
     {
-        var todayStudyWords = protocolUser.TodayStudyWords[protocolUser.TodayStudyDate];
+        if (!protocolUser.TodayStudyWords.TryGetValue(protocolUser.TodayStudyDate, out var todayStudyWords)) return;
+
         protocolUser.TodayStudyWordsIndex = (protocolUser.TodayStudyWordsIndex + 1) % todayStudyWords.Count;
     }
 }

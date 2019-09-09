@@ -64,7 +64,8 @@ public class SignInRequest : Request
 
     private void UpdateTodayWordStudyCount(ProtocolUser protocolUser)
     {
-        var todayStudyWords = protocolUser.TodayStudyWords[protocolUser.TodayStudyDate];
+        if (!protocolUser.TodayStudyWords.TryGetValue(protocolUser.TodayStudyDate, out var todayStudyWords)) return;
+
         foreach (var id in todayStudyWords)
         {
             var data = protocolUser.WordStudyData[id];
