@@ -11,4 +11,10 @@ public class RequestSender : Singleton<RequestSender>
         var request = new StudyWorkRequest();
         return request.Send<StudyWordResponse>();
     }
+
+    public Request TestWordIKnow()
+    {
+        var request = new TestWordIKnowRequest();
+        return request.Send<TestWordIKnowResponse>();
+    }
 }

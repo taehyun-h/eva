@@ -14,6 +14,11 @@ public partial class User
         OnUpdate(response.ProtocolUser);
     }
 
+    public void OnUpdate(TestWordIKnowResponse response)
+    {
+        OnUpdate(response.ProtocolUser);
+    }
+
     #endregion
 
     private void OnUpdate(ProtocolUser protocolUser)
@@ -24,6 +29,7 @@ public partial class User
         {
             WordStudyData[id] = new UserWordStudyData(data);
         }
+
         WordTestData = new Dictionary<int, UserWordTestData>();
         foreach (var (id, data) in protocolUser.WordTestData)
         {
