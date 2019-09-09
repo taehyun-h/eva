@@ -26,4 +26,15 @@ public class ProtocolUser
 
         list.Add(id);
     }
+
+    public void AddTestWord(int date, int id)
+    {
+        if (!TodayTestWords.TryGetValue(date, out var list))
+        {
+            list = new List<int>();
+            TodayTestWords[date] = list;
+        }
+
+        list.Add(id);
+    }
 }

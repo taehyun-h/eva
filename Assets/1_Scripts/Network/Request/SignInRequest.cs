@@ -4,15 +4,20 @@ public class SignInRequest : Request
 {
     protected override TResponse GetResponse<TResponse>()
     {
+        var response = new SignInResponse
+        {
+            ProtocolUser = GetProtocolUser()
+        };
+        return response as TResponse;
+    }
+
+    private ProtocolUser GetProtocolUser()
+    {
         var protocolUser = Server.Instance.GetProtocolUser();
         UpdateSignIn(protocolUser);
         Server.Instance.SaveProtocolUser();
 
-        var response = new SignInResponse
-        {
-            ProtocolUser = protocolUser
-        };
-        return response as TResponse;
+        return protocolUser;
     }
 
     private void UpdateSignIn(ProtocolUser protocolUser)
@@ -65,15 +70,32 @@ public class SignInRequest : Request
             var data = protocolUser.WordStudyData[id];
             if (data.StudyCount >= StaticData.StudyPeriodDate.Length)
             {
-                // TODO : Add word to test data
+                AddTestWordToNextPeriod(protocolUser, data);
             }
             else
             {
-                data.StudyCount++;
-
-                var nextStudyDate = protocolUser.TodayStudyDate + StaticData.StudyPeriodDate[data.StudyCount - 1];
-                protocolUser.AddStudyWord(nextStudyDate, data.Id);
+                AddStudyWordToNextPeriod(protocolUser, data);
             }
         }
+    }
+
+    private void AddTestWordToNextPeriod(ProtocolUser protocolUser, ProtocolUserWordStudyData data)
+    {
+        var testData = new ProtocolUserWordTestData
+        {
+            Id = data.Id,
+            LastPassedDate = protocolUser.TodayStudyDate,
+            TestPassCount = 0
+        };
+        var nextStudyDate = protocolUser.TodayStudyDate + StaticData.TestPeriodDate[testData.TestPassCount];
+        protocolUser.AddTestWord(nextStudyDate, testData.Id);
+    }
+
+    private void AddStudyWordToNextPeriod(ProtocolUser protocolUser, ProtocolUserWordStudyData data)
+    {
+        data.StudyCount++;
+
+        var nextStudyDate = protocolUser.TodayStudyDate + StaticData.StudyPeriodDate[data.StudyCount - 1];
+        protocolUser.AddStudyWord(nextStudyDate, data.Id);
     }
 }
