@@ -65,14 +65,14 @@ public class TestPanel : MonoBehaviour
 
     public void OnIKnowButtonClick()
     {
-        // TODO : i know request
+        RequestSender.Instance.TestWordIKnow();
 
         SetNextWord();
     }
 
     public void OnIDontKnowButtonClick()
     {
-        // TODO : i don't know request
+        RequestSender.Instance.TestWordIDontKnow();
 
         SetNextWord();
     }
