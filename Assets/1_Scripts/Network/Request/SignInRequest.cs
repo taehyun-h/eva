@@ -69,6 +69,8 @@ public class SignInRequest : Request
         foreach (var id in todayStudyWords)
         {
             var data = protocolUser.WordStudyData[id];
+            data.StudyCount++;
+
             if (data.StudyCount >= StaticData.StudyPeriodDate.Length)
             {
                 AddTestWordToNextPeriod(protocolUser, data);
@@ -88,15 +90,15 @@ public class SignInRequest : Request
             LastPassedDate = protocolUser.TodayStudyDate,
             TestPassCount = 0
         };
+        protocolUser.WordTestData[testData.Id] = testData;
+
         var nextStudyDate = protocolUser.TodayStudyDate + StaticData.TestPeriodDate[testData.TestPassCount];
         protocolUser.AddTestWord(nextStudyDate, testData.Id);
     }
 
     private void AddStudyWordToNextPeriod(ProtocolUser protocolUser, ProtocolUserWordStudyData data)
     {
-        data.StudyCount++;
-
-        var nextStudyDate = protocolUser.TodayStudyDate + StaticData.StudyPeriodDate[data.StudyCount - 1];
+        var nextStudyDate = protocolUser.TodayStudyDate + StaticData.StudyPeriodDate[data.StudyCount];
         protocolUser.AddStudyWord(nextStudyDate, data.Id);
     }
 }

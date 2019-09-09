@@ -5,7 +5,7 @@ using UnityEngine;
 public class StaticData : Singleton<StaticData>
 {
     public const int NewStudyWordCount = 30;
-    public static readonly int[] StudyPeriodDate = {2, 3, 5};
+    public static readonly int[] StudyPeriodDate = {0, 2, 3, 5};
     public static readonly int[] TestPeriodDate = {5, 10, 20};
 
     public void Load()
