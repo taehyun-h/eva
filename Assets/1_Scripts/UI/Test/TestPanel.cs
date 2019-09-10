@@ -87,15 +87,13 @@ public class TestPanel : MonoBehaviour
 
     public void OnIKnowButtonClick()
     {
-        RequestSender.Instance.TestWordIKnow();
-
-        SetNextWord();
+        RequestSender.Instance.Send<TestWordIKnowRequest>()
+            .SetOnCompleteAction(SetNextWord);
     }
 
     public void OnIDontKnowButtonClick()
     {
-        RequestSender.Instance.TestWordIDontKnow();
-
-        SetNextWord();
+        RequestSender.Instance.Send<TestWordIDontKnowRequest>()
+            .SetOnCompleteAction(SetNextWord);
     }
 }

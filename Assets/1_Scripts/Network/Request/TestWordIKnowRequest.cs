@@ -1,53 +1,14 @@
 public class TestWordIKnowRequest : Request
 {
-    protected override TResponse GetResponse<TResponse>()
+    public override string Url { get; } = "test_word_i_know";
+
+    public override void Complete(string content)
     {
-        var protocolUser = Server.Instance.GetProtocolUser();
-        UpdateTestWord(protocolUser);
-        UpdateTodayTestWord(protocolUser);
-        Server.Instance.SaveProtocolUser();
-
-        var response = new TestWordIKnowResponse()
+        ResponseUpdater.Instance.OnUpdate(new SignInResponse
         {
-            ProtocolUser = protocolUser
-        };
-        return response as TResponse;
-    }
+            ProtocolUser = JsonUtil.DeserializeObject<ProtocolUser>(content)
+        });
 
-    private void UpdateTestWord(ProtocolUser protocolUser)
-    {
-        if (!protocolUser.TodayTestWords.TryGetValue(protocolUser.TodayStudyDate, out var todayTestWords)) return;
-
-        var id = todayTestWords[protocolUser.TodayTestWordsIndex];
-        if (!protocolUser.WordTestData.TryGetValue(id, out var data)) return;
-
-        data.TestPassCount++;
-        data.LastPassedDate = protocolUser.TodayStudyDate;
-        
-        if (data.TestPassCount >= StaticData.TestPeriodDate.Length)
-        {
-            // Do nothing
-        }
-        else
-        {
-            var nextTestData = protocolUser.TodayStudyDate + StaticData.TestPeriodDate[data.TestPassCount];
-            protocolUser.AddTestWord(nextTestData, data.Id);
-        }
-    }
-
-    private void UpdateTodayTestWord(ProtocolUser protocolUser)
-    {
-        if (!protocolUser.TodayTestWords.TryGetValue(protocolUser.TodayStudyDate, out var todayTestWords)) return;
-
-        protocolUser.TodayTestWordsIndex++;
-        if (protocolUser.TodayTestWordsIndex >= todayTestWords.Count)
-        {
-            protocolUser.TodayTestWordsIndex = 0;
-            protocolUser.TodayTestWords.Remove(protocolUser.TodayStudyDate);
-        }
-        else
-        {
-            protocolUser.TodayTestWordsIndex %= protocolUser.TodayStudyDate;
-        }
+        base.Complete(content);
     }
 }

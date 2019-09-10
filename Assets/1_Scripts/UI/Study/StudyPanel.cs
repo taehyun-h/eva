@@ -43,8 +43,7 @@ public class StudyPanel : MonoBehaviour
 
     public void OnBackgroundButtonClick()
     {
-        RequestSender.Instance.StudyWord();
-
-        SetNextWord();
+        RequestSender.Instance.Send<StudyWordRequest>()
+            .SetOnCompleteAction(SetNextWord);
     }
 }

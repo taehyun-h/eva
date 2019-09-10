@@ -1,26 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class StaticData : Singleton<StaticData>
 {
-    public const int NewStudyWordCount = 30;
-    public static readonly int[] StudyPeriodDate = {0, 2, 3, 5};
-    public static readonly int[] TestPeriodDate = {5, 10, 20};
-
-    public void Load()
+    public void Load(string wordDataText)
     {
-        LoadWordData();
-    }
-
-    public bool ShouldStudyNewWord(int date)
-    {
-        return date % 3 == 1 || date % 3 == 2;
+        LoadWordData(wordDataText);
     }
 
     #region WordData
-
-    private const string WordDataPath = "StaticData/WordData";
 
     private readonly Dictionary<int, WordData> _wordData = new Dictionary<int, WordData>();
 
@@ -29,10 +17,9 @@ public class StaticData : Singleton<StaticData>
         return _wordData.TryGetValue(id, out var wordData) ? wordData : null;
     }
 
-    private void LoadWordData()
+    private void LoadWordData(string wordDataText)
     {
-        var text = Resources.Load<TextAsset>(WordDataPath).text;
-        var allWordData = text.Split('\n');
+        var allWordData = wordDataText.Split('\n');
         for (var id = 1; id <= allWordData.Length; id++)
         {
             var wordData = allWordData[id - 1].Split(':');

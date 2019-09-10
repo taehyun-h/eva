@@ -12,19 +12,14 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     {
         base.Init();
 
-        InitData();
-        InitUser();
-    }
-
-    private void InitData()
-    {
-        StaticData.Instance.Load();
+        RequestSender.Instance.Send<GetWordDataRequest>()
+            .SetOnCompleteAction(InitUser);
     }
 
     private void InitUser()
     {
-        RequestSender.Instance.SignIn();
-        ShowTitlePanel();
+        RequestSender.Instance.Send<SignInRequest>()
+            .SetOnCompleteAction(ShowTitlePanel);
     }
 
     #region UI

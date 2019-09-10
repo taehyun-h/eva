@@ -1,21 +1,29 @@
+using System;
+
 public abstract class Request
 {
-    public Request Send<TResponse>()
-        where TResponse : Response
-    {
-        var response = GetResponse<TResponse>();
-        if (response == null)
-        {
-            D.Error($"{GetType().Name} failed.");
-        }
-        else
-        {
-            ResponseUpdater.Instance.OnUpdate(response);
-        }
+    public abstract string Url { get; }
 
-        return this;
+    private Action _onCompleteAction;
+    private Action _onFailAction;
+
+    public void SetOnCompleteAction(Action onCompleteAction)
+    {
+        _onCompleteAction = onCompleteAction;
     }
 
-    protected abstract TResponse GetResponse<TResponse>()
-        where TResponse : Response;
+    public void SetOnFailAction(Action onFailAction)
+    {
+        _onFailAction = onFailAction;
+    }
+
+    public virtual void Complete(string content)
+    {
+        _onCompleteAction?.Invoke();
+    }
+
+    public virtual void Fail()
+    {
+        _onFailAction.Invoke();
+    }
 }
