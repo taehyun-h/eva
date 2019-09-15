@@ -8,6 +8,8 @@ public class RequestSender : SingletonMonoBehaviour<RequestSender>
     public TRequest Send<TRequest>()
         where TRequest : Request, new()
     {
+        InputBlocker.Instance.BlockInput();
+
         var request = new TRequest();
         StartCoroutine(SendRequest(request));
         return request;
@@ -30,5 +32,7 @@ public class RequestSender : SingletonMonoBehaviour<RequestSender>
             D.LogPack("Request success", www.downloadHandler.text);
             request.Complete(www.downloadHandler.text);
         }
+
+        InputBlocker.Instance.UnblockInput();
     }
 }
