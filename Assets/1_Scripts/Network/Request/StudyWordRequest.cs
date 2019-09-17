@@ -4,7 +4,7 @@ public class StudyWordRequest : Request
 
     public override void Complete(string content)
     {
-        ResponseUpdater.Instance.OnUpdate(new SignInResponse
+        ResponseUpdater.Instance.OnUpdate(new StudyWordResponse
         {
             ProtocolUser = JsonUtil.DeserializeObject<ProtocolUser>(content)
         });

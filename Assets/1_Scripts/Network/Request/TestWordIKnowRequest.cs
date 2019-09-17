@@ -4,7 +4,7 @@ public class TestWordIKnowRequest : Request
 
     public override void Complete(string content)
     {
-        ResponseUpdater.Instance.OnUpdate(new SignInResponse
+        ResponseUpdater.Instance.OnUpdate(new TestWordIKnowResponse
         {
             ProtocolUser = JsonUtil.DeserializeObject<ProtocolUser>(content)
         });
