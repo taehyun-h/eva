@@ -30,9 +30,21 @@ public class RequestSender : SingletonMonoBehaviour<RequestSender>
         else
         {
             D.LogPack("Request success", www.downloadHandler.text);
-            request.Complete(www.downloadHandler.text);
+
+            var content = GetContent(www.downloadHandler.text);
+            D.LogPack("Response Content", content);
+
+            request.Complete(content);
         }
 
         InputBlocker.Instance.UnblockInput();
+    }
+
+    private string GetContent(string response)
+    {
+        if (string.IsNullOrEmpty(response)) return response;
+        if (!response.StartsWith("HTTP")) return response;
+
+        return StringUtil.RemoveCharacterWithCount((string) response.Clone(), '\n', 4);
     }
 }
