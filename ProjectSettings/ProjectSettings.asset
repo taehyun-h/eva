@@ -523,6 +523,7 @@ PlayerSettings:
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
     1: USE_LOG
+    4: USE_LOG
   platformArchitecture: {}
   scriptingBackend:
     Standalone: 1
