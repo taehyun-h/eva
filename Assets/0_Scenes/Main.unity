@@ -2919,7 +2919,6 @@ MonoBehaviour:
   _meaningTexts:
   - {fileID: 329118898}
   - {fileID: 926514014}
-  - {fileID: 0}
   _index: {fileID: 12268768}
   _meanings: {fileID: 1820392185}
   _showMeaningsButton: {fileID: 42324973}
