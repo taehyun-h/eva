@@ -47,6 +47,8 @@ public class TestPanel : MonoBehaviour
 
         _meanings.SetActive(false);
         _showMeaningsButton.SetActive(true);
+        _iKnowButton.SetActive(false);
+        _iDontKnowButton.SetActive(false);
     }
 
     private void SetWordIndex()
@@ -58,7 +60,7 @@ public class TestPanel : MonoBehaviour
     private void SetWordData()
     {
         var todayTestWords = User.Instance.TodayTestWords[User.Instance.TodayStudyDate];
-        var id = todayTestWords[User.Instance.TodayStudyWordsIndex];
+        var id = todayTestWords[User.Instance.TodayTestWordsIndex];
         var wordData = StaticData.Instance.GetWorldData(id);
         _word.text = wordData.Spelling;
 
