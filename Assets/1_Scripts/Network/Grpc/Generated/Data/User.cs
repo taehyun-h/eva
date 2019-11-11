@@ -28,25 +28,25 @@ namespace Data.User {
             "IjEKDFN0dWR5aW5nV29yZBIKCgJpZBgBIAEoBRIVCg1zdHVkaWVkX2NvdW50",
             "GAIgASgFIi8KC1Rlc3RpbmdXb3JkEgoKAmlkGAEgASgFEhQKDHBhc3NlZF9j",
             "b3VudBgCIAEoBSImCglXb3JkT3JkZXISCgoCaWQYASABKAUSDQoFb3JkZXIY",
-            "AiABKAUisQYKBFVzZXISKgoRbGFzdF9zaWduaW5nX3RpbWUYASABKAsyDy5k",
-            "YXRhLnVzZXIuVGltZRIYChB0b2RheV9zdHVkeV9kYXRlGAIgASgFEhwKFGxh",
-            "c3Rfc3R1ZGllZF93b3JkX2lkGAMgASgFEjoKDnN0dWR5aW5nX3dvcmRzGAQg",
-            "AygLMiIuZGF0YS51c2VyLlVzZXIuU3R1ZHlpbmdXb3Jkc0VudHJ5EjgKDXRl",
-            "c3Rpbmdfd29yZHMYBSADKAsyIS5kYXRhLnVzZXIuVXNlci5UZXN0aW5nV29y",
-            "ZHNFbnRyeRJFChRzdHVkeWluZ193b3JkX29yZGVycxgGIAMoCzInLmRhdGEu",
-            "dXNlci5Vc2VyLlN0dWR5aW5nV29yZE9yZGVyc0VudHJ5EkMKE3Rlc3Rpbmdf",
-            "d29yZF9vcmRlcnMYByADKAsyJi5kYXRhLnVzZXIuVXNlci5UZXN0aW5nV29y",
-            "ZE9yZGVyc0VudHJ5EiIKGnRvZGF5X3N0dWR5aW5nX3dvcmRzX2luZGV4GAgg",
-            "ASgFEh8KF3RvZGF5X3N0dWR5aW5nX3dvcmRfaWRzGAkgAygFEiEKGXRvZGF5",
-            "X3Rlc3Rpbmdfd29yZHNfaW5kZXgYCiABKAUSHgoWdG9kYXlfdGVzdGluZ193",
-            "b3JkX2lkcxgLIAMoBRpNChJTdHVkeWluZ1dvcmRzRW50cnkSCwoDa2V5GAEg",
-            "ASgFEiYKBXZhbHVlGAIgASgLMhcuZGF0YS51c2VyLlN0dWR5aW5nV29yZDoC",
-            "OAEaSwoRVGVzdGluZ1dvcmRzRW50cnkSCwoDa2V5GAEgASgFEiUKBXZhbHVl",
-            "GAIgASgLMhYuZGF0YS51c2VyLlRlc3RpbmdXb3JkOgI4ARpPChdTdHVkeWlu",
-            "Z1dvcmRPcmRlcnNFbnRyeRILCgNrZXkYASABKAUSIwoFdmFsdWUYAiABKAsy",
-            "FC5kYXRhLnVzZXIuV29yZE9yZGVyOgI4ARpOChZUZXN0aW5nV29yZE9yZGVy",
-            "c0VudHJ5EgsKA2tleRgBIAEoBRIjCgV2YWx1ZRgCIAEoCzIULmRhdGEudXNl",
-            "ci5Xb3JkT3JkZXI6AjgBYgZwcm90bzM="));
+            "AiABKAUivQYKBFVzZXISCgoCaWQYASABKAkSKgoRbGFzdF9zaWduaW5nX3Rp",
+            "bWUYAiABKAsyDy5kYXRhLnVzZXIuVGltZRIYChB0b2RheV9zdHVkeV9kYXRl",
+            "GAMgASgFEhwKFGxhc3Rfc3R1ZGllZF93b3JkX2lkGAQgASgFEjoKDnN0dWR5",
+            "aW5nX3dvcmRzGAUgAygLMiIuZGF0YS51c2VyLlVzZXIuU3R1ZHlpbmdXb3Jk",
+            "c0VudHJ5EjgKDXRlc3Rpbmdfd29yZHMYBiADKAsyIS5kYXRhLnVzZXIuVXNl",
+            "ci5UZXN0aW5nV29yZHNFbnRyeRJFChRzdHVkeWluZ193b3JkX29yZGVycxgH",
+            "IAMoCzInLmRhdGEudXNlci5Vc2VyLlN0dWR5aW5nV29yZE9yZGVyc0VudHJ5",
+            "EkMKE3Rlc3Rpbmdfd29yZF9vcmRlcnMYCCADKAsyJi5kYXRhLnVzZXIuVXNl",
+            "ci5UZXN0aW5nV29yZE9yZGVyc0VudHJ5EiIKGnRvZGF5X3N0dWR5aW5nX3dv",
+            "cmRzX2luZGV4GAkgASgFEh8KF3RvZGF5X3N0dWR5aW5nX3dvcmRfaWRzGAog",
+            "AygFEiEKGXRvZGF5X3Rlc3Rpbmdfd29yZHNfaW5kZXgYCyABKAUSHgoWdG9k",
+            "YXlfdGVzdGluZ193b3JkX2lkcxgMIAMoBRpNChJTdHVkeWluZ1dvcmRzRW50",
+            "cnkSCwoDa2V5GAEgASgFEiYKBXZhbHVlGAIgASgLMhcuZGF0YS51c2VyLlN0",
+            "dWR5aW5nV29yZDoCOAEaSwoRVGVzdGluZ1dvcmRzRW50cnkSCwoDa2V5GAEg",
+            "ASgFEiUKBXZhbHVlGAIgASgLMhYuZGF0YS51c2VyLlRlc3RpbmdXb3JkOgI4",
+            "ARpPChdTdHVkeWluZ1dvcmRPcmRlcnNFbnRyeRILCgNrZXkYASABKAUSIwoF",
+            "dmFsdWUYAiABKAsyFC5kYXRhLnVzZXIuV29yZE9yZGVyOgI4ARpOChZUZXN0",
+            "aW5nV29yZE9yZGVyc0VudHJ5EgsKA2tleRgBIAEoBRIjCgV2YWx1ZRgCIAEo",
+            "CzIULmRhdGEudXNlci5Xb3JkT3JkZXI6AjgBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +54,7 @@ namespace Data.User {
             new pbr::GeneratedClrTypeInfo(typeof(global::Data.User.StudyingWord), global::Data.User.StudyingWord.Parser, new[]{ "Id", "StudiedCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Data.User.TestingWord), global::Data.User.TestingWord.Parser, new[]{ "Id", "PassedCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Data.User.WordOrder), global::Data.User.WordOrder.Parser, new[]{ "Id", "Order" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Data.User.User), global::Data.User.User.Parser, new[]{ "LastSigningTime", "TodayStudyDate", "LastStudiedWordId", "StudyingWords", "TestingWords", "StudyingWordOrders", "TestingWordOrders", "TodayStudyingWordsIndex", "TodayStudyingWordIds", "TodayTestingWordsIndex", "TodayTestingWordIds" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Data.User.User), global::Data.User.User.Parser, new[]{ "Id", "LastSigningTime", "TodayStudyDate", "LastStudiedWordId", "StudyingWords", "TestingWords", "StudyingWordOrders", "TestingWordOrders", "TodayStudyingWordsIndex", "TodayStudyingWordIds", "TodayTestingWordsIndex", "TodayTestingWordIds" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, })
           }));
     }
     #endregion
@@ -686,6 +686,7 @@ namespace Data.User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public User(User other) : this() {
+      id_ = other.id_;
       lastSigningTime_ = other.lastSigningTime_ != null ? other.lastSigningTime_.Clone() : null;
       todayStudyDate_ = other.todayStudyDate_;
       lastStudiedWordId_ = other.lastStudiedWordId_;
@@ -705,8 +706,19 @@ namespace Data.User {
       return new User(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "last_signing_time" field.</summary>
-    public const int LastSigningTimeFieldNumber = 1;
+    public const int LastSigningTimeFieldNumber = 2;
     private global::Data.User.Time lastSigningTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Data.User.Time LastSigningTime {
@@ -717,7 +729,7 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "today_study_date" field.</summary>
-    public const int TodayStudyDateFieldNumber = 2;
+    public const int TodayStudyDateFieldNumber = 3;
     private int todayStudyDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TodayStudyDate {
@@ -728,7 +740,7 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "last_studied_word_id" field.</summary>
-    public const int LastStudiedWordIdFieldNumber = 3;
+    public const int LastStudiedWordIdFieldNumber = 4;
     private int lastStudiedWordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int LastStudiedWordId {
@@ -739,9 +751,9 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "studying_words" field.</summary>
-    public const int StudyingWordsFieldNumber = 4;
+    public const int StudyingWordsFieldNumber = 5;
     private static readonly pbc::MapField<int, global::Data.User.StudyingWord>.Codec _map_studyingWords_codec
-        = new pbc::MapField<int, global::Data.User.StudyingWord>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.StudyingWord.Parser), 34);
+        = new pbc::MapField<int, global::Data.User.StudyingWord>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.StudyingWord.Parser), 42);
     private readonly pbc::MapField<int, global::Data.User.StudyingWord> studyingWords_ = new pbc::MapField<int, global::Data.User.StudyingWord>();
     /// <summary>
     /// key : word id
@@ -752,9 +764,9 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "testing_words" field.</summary>
-    public const int TestingWordsFieldNumber = 5;
+    public const int TestingWordsFieldNumber = 6;
     private static readonly pbc::MapField<int, global::Data.User.TestingWord>.Codec _map_testingWords_codec
-        = new pbc::MapField<int, global::Data.User.TestingWord>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.TestingWord.Parser), 42);
+        = new pbc::MapField<int, global::Data.User.TestingWord>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.TestingWord.Parser), 50);
     private readonly pbc::MapField<int, global::Data.User.TestingWord> testingWords_ = new pbc::MapField<int, global::Data.User.TestingWord>();
     /// <summary>
     /// key : word id
@@ -765,9 +777,9 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "studying_word_orders" field.</summary>
-    public const int StudyingWordOrdersFieldNumber = 6;
+    public const int StudyingWordOrdersFieldNumber = 7;
     private static readonly pbc::MapField<int, global::Data.User.WordOrder>.Codec _map_studyingWordOrders_codec
-        = new pbc::MapField<int, global::Data.User.WordOrder>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.WordOrder.Parser), 50);
+        = new pbc::MapField<int, global::Data.User.WordOrder>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.WordOrder.Parser), 58);
     private readonly pbc::MapField<int, global::Data.User.WordOrder> studyingWordOrders_ = new pbc::MapField<int, global::Data.User.WordOrder>();
     /// <summary>
     /// key : word id
@@ -778,9 +790,9 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "testing_word_orders" field.</summary>
-    public const int TestingWordOrdersFieldNumber = 7;
+    public const int TestingWordOrdersFieldNumber = 8;
     private static readonly pbc::MapField<int, global::Data.User.WordOrder>.Codec _map_testingWordOrders_codec
-        = new pbc::MapField<int, global::Data.User.WordOrder>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.WordOrder.Parser), 58);
+        = new pbc::MapField<int, global::Data.User.WordOrder>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Data.User.WordOrder.Parser), 66);
     private readonly pbc::MapField<int, global::Data.User.WordOrder> testingWordOrders_ = new pbc::MapField<int, global::Data.User.WordOrder>();
     /// <summary>
     /// key : word id
@@ -791,7 +803,7 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "today_studying_words_index" field.</summary>
-    public const int TodayStudyingWordsIndexFieldNumber = 8;
+    public const int TodayStudyingWordsIndexFieldNumber = 9;
     private int todayStudyingWordsIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TodayStudyingWordsIndex {
@@ -802,9 +814,9 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "today_studying_word_ids" field.</summary>
-    public const int TodayStudyingWordIdsFieldNumber = 9;
+    public const int TodayStudyingWordIdsFieldNumber = 10;
     private static readonly pb::FieldCodec<int> _repeated_todayStudyingWordIds_codec
-        = pb::FieldCodec.ForInt32(74);
+        = pb::FieldCodec.ForInt32(82);
     private readonly pbc::RepeatedField<int> todayStudyingWordIds_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> TodayStudyingWordIds {
@@ -812,7 +824,7 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "today_testing_words_index" field.</summary>
-    public const int TodayTestingWordsIndexFieldNumber = 10;
+    public const int TodayTestingWordsIndexFieldNumber = 11;
     private int todayTestingWordsIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TodayTestingWordsIndex {
@@ -823,9 +835,9 @@ namespace Data.User {
     }
 
     /// <summary>Field number for the "today_testing_word_ids" field.</summary>
-    public const int TodayTestingWordIdsFieldNumber = 11;
+    public const int TodayTestingWordIdsFieldNumber = 12;
     private static readonly pb::FieldCodec<int> _repeated_todayTestingWordIds_codec
-        = pb::FieldCodec.ForInt32(90);
+        = pb::FieldCodec.ForInt32(98);
     private readonly pbc::RepeatedField<int> todayTestingWordIds_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> TodayTestingWordIds {
@@ -845,6 +857,7 @@ namespace Data.User {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Id != other.Id) return false;
       if (!object.Equals(LastSigningTime, other.LastSigningTime)) return false;
       if (TodayStudyDate != other.TodayStudyDate) return false;
       if (LastStudiedWordId != other.LastStudiedWordId) return false;
@@ -862,6 +875,7 @@ namespace Data.User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (lastSigningTime_ != null) hash ^= LastSigningTime.GetHashCode();
       if (TodayStudyDate != 0) hash ^= TodayStudyDate.GetHashCode();
       if (LastStudiedWordId != 0) hash ^= LastStudiedWordId.GetHashCode();
@@ -886,16 +900,20 @@ namespace Data.User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (lastSigningTime_ != null) {
+      if (Id.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (lastSigningTime_ != null) {
+        output.WriteRawTag(18);
         output.WriteMessage(LastSigningTime);
       }
       if (TodayStudyDate != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(TodayStudyDate);
       }
       if (LastStudiedWordId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt32(LastStudiedWordId);
       }
       studyingWords_.WriteTo(output, _map_studyingWords_codec);
@@ -903,12 +921,12 @@ namespace Data.User {
       studyingWordOrders_.WriteTo(output, _map_studyingWordOrders_codec);
       testingWordOrders_.WriteTo(output, _map_testingWordOrders_codec);
       if (TodayStudyingWordsIndex != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteInt32(TodayStudyingWordsIndex);
       }
       todayStudyingWordIds_.WriteTo(output, _repeated_todayStudyingWordIds_codec);
       if (TodayTestingWordsIndex != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteInt32(TodayTestingWordsIndex);
       }
       todayTestingWordIds_.WriteTo(output, _repeated_todayTestingWordIds_codec);
@@ -920,6 +938,9 @@ namespace Data.User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
       if (lastSigningTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastSigningTime);
       }
@@ -951,6 +972,9 @@ namespace Data.User {
     public void MergeFrom(User other) {
       if (other == null) {
         return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
       }
       if (other.lastSigningTime_ != null) {
         if (lastSigningTime_ == null) {
@@ -988,51 +1012,55 @@ namespace Data.User {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
             if (lastSigningTime_ == null) {
               LastSigningTime = new global::Data.User.Time();
             }
             input.ReadMessage(LastSigningTime);
             break;
           }
-          case 16: {
+          case 24: {
             TodayStudyDate = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 32: {
             LastStudiedWordId = input.ReadInt32();
             break;
           }
-          case 34: {
+          case 42: {
             studyingWords_.AddEntriesFrom(input, _map_studyingWords_codec);
             break;
           }
-          case 42: {
+          case 50: {
             testingWords_.AddEntriesFrom(input, _map_testingWords_codec);
             break;
           }
-          case 50: {
+          case 58: {
             studyingWordOrders_.AddEntriesFrom(input, _map_studyingWordOrders_codec);
             break;
           }
-          case 58: {
+          case 66: {
             testingWordOrders_.AddEntriesFrom(input, _map_testingWordOrders_codec);
             break;
           }
-          case 64: {
+          case 72: {
             TodayStudyingWordsIndex = input.ReadInt32();
             break;
           }
-          case 74:
-          case 72: {
+          case 82:
+          case 80: {
             todayStudyingWordIds_.AddEntriesFrom(input, _repeated_todayStudyingWordIds_codec);
             break;
           }
-          case 80: {
+          case 88: {
             TodayTestingWordsIndex = input.ReadInt32();
             break;
           }
-          case 90:
-          case 88: {
+          case 98:
+          case 96: {
             todayTestingWordIds_.AddEntriesFrom(input, _repeated_todayTestingWordIds_codec);
             break;
           }
