@@ -1,9 +1,27 @@
 using System.Collections;
+using Grpc.Core;
 using UnityEngine.Networking;
 
 public class RequestSender : SingletonMonoBehaviour<RequestSender>
 {
-    private const string ServerUrl = "http://127.0.0.1:80";
+    private const string ServerUrl = "127.0.0.1:50051";
+
+    private Channel _channel;
+
+    protected override void Init()
+    {
+        _channel = new Channel(ServerUrl, ChannelCredentials.Insecure);
+    }
+
+    public Service.Sign.SignInResponse SignIn(string userId)
+    {
+        var client = new Service.Sign.Sign.SignClient(_channel);
+        var request = new Service.Sign.SignInRequest
+        {
+            UserId = userId,
+        };
+        return client.SignIn(request);
+    }
 
     public TRequest Send<TRequest>()
         where TRequest : Request, new()
