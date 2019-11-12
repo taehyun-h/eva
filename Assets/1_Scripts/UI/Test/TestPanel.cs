@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -61,20 +60,23 @@ public class TestPanel : MonoBehaviour
     {
         var todayTestWords = User.Instance.TodayTestWords[User.Instance.TodayStudyDate];
         var id = todayTestWords[User.Instance.TodayTestWordsIndex];
-        var wordData = StaticData.Instance.GetWorldData(id);
-        _word.text = wordData.Spelling;
+        var word = StaticData.Instance.GetWord(id);
+        _word.text = word.Spelling;
 
-        var i = 0;
-        var length = Math.Min(wordData.Meanings.Length, _meaningTexts.Length);
-        for (i = 0; i < length; i++)
+        SetMeaning(0, word.Meaning);
+        SetMeaning(1, word.Meaning2);
+    }
+
+    private void SetMeaning(int index, string text)
+    {
+        if (string.IsNullOrEmpty(text))
         {
-            _meaningTexts[i].gameObject.SetActive(true);
-            _meaningTexts[i].text = wordData.Meanings[i];
+            _meaningTexts[index].gameObject.SetActive(false);
         }
-
-        for (; i < _meaningTexts.Length; i++)
+        else
         {
-            _meaningTexts[i].gameObject.SetActive(false);
+            _meaningTexts[index].gameObject.SetActive(true);
+            _meaningTexts[index].text = text;
         }
     }
 

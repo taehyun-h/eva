@@ -24,20 +24,23 @@ public class StudyPanel : MonoBehaviour
 
     private void SetWordData(int id)
     {
-        var wordData = StaticData.Instance.GetWorldData(id);
-        _word.text = wordData.Spelling;
+        var word = StaticData.Instance.GetWord(id);
+        _word.text = word.Spelling;
 
-        var i = 0;
-        var length = Math.Min(wordData.Meanings.Length, _means.Length);
-        for (i = 0; i < length; i++)
+        SetMeaning(0, word.Meaning);
+        SetMeaning(1, word.Meaning2);
+    }
+
+    private void SetMeaning(int index, string text)
+    {
+        if (string.IsNullOrEmpty(text))
         {
-            _means[i].gameObject.SetActive(true);
-            _means[i].text = wordData.Meanings[i];
+            _means[index].gameObject.SetActive(false);
         }
-
-        for (; i < _means.Length; i++)
+        else
         {
-            _means[i].gameObject.SetActive(false);
+            _means[index].gameObject.SetActive(true);
+            _means[index].text = text;
         }
     }
 

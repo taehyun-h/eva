@@ -49,11 +49,6 @@ public class StaticData : Singleton<StaticData>
 
     private readonly Dictionary<int, WordData> _wordData = new Dictionary<int, WordData>();
 
-    public WordData GetWorldData(int id)
-    {
-        return _wordData.TryGetValue(id, out var wordData) ? wordData : null;
-    }
-
     private void LoadWordData(string wordDataText)
     {
         var allWordData = wordDataText.Split('\n');
