@@ -2,6 +2,11 @@ using System.Collections.Generic;
 
 public partial class User
 {
+    public void OnUpdate(Service.Sign.SignInResponse response)
+    {
+        // todo : update
+    }
+
     #region Response
 
     public void OnUpdate(SignInResponse response)
