@@ -49,3 +49,5 @@ Assets/Plugins/Editor/JetBrains.meta
 Assets/Plugins/Editor.meta
 Assets/Test.meta
 Assets/Test
+Assets/Plugins/Grpc.Core/runtimes/ios/libgrpc.a
+Assets/Plugins/Grpc.Core/runtimes/ios/libgrpc.a.meta
