@@ -4,11 +4,6 @@ public class ResponseUpdater : Singleton<ResponseUpdater>
     {
         switch (response)
         {
-            case GetWordDataResponse getWordDataResponse:
-            {
-                StaticData.Instance.Load(getWordDataResponse.WordDataText);
-                break;
-            }
             case SignInResponse signInResponse:
             {
                 User.Instance.OnUpdate(signInResponse);
