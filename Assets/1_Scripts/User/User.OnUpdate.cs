@@ -7,6 +7,16 @@ public partial class User
         // todo : update
     }
 
+    public void OnUpdate(Service.Study.MoveToPreviousWordResponse response)
+    {
+        // todo : update
+    }
+
+    public void OnUpdate(Service.Study.MoveToNextWordResponse response)
+    {
+        // todo : update
+    }
+
     #region Response
 
     public void OnUpdate(SignInResponse response)

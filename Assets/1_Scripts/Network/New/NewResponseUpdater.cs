@@ -4,4 +4,14 @@ public class NewResponseUpdater : Singleton<NewResponseUpdater>
     {
         User.Instance.OnUpdate(response);
     }
+
+    public void OnUpdate(Service.Study.MoveToPreviousWordResponse response)
+    {
+        User.Instance.OnUpdate(response);
+    }
+
+    public void OnUpdate(Service.Study.MoveToNextWordResponse response)
+    {
+        User.Instance.OnUpdate(response);
+    }
 }

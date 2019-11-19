@@ -11,4 +11,10 @@ public partial class User : Singleton<User>
 
     public int TodayTestWordsIndex { get; private set; }
     public Dictionary<int, List<int>> TodayTestWords { get; private set; }
+
+    #region Grpc
+
+    public string Id { get; private set; }
+
+    #endregion
 }
