@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,15 +9,14 @@ public class StudyPanel : MonoBehaviour
 
     public void Show()
     {
-        SetNextWord();
+        UpdateWord();
     }
 
-    private void SetNextWord()
+    private void UpdateWord()
     {
-        var todayStudyWords = User.Instance.TodayStudyWords[User.Instance.TodayStudyDate];
-        _index.text = $"{User.Instance.TodayStudyWordsIndex + 1} / {todayStudyWords.Count}";
+        _index.text = $"{User.Instance.TodayStudyingWordsIndex + 1} / {User.Instance.TodayStudyingWordIds.Count}";
 
-        var id = todayStudyWords[User.Instance.TodayStudyWordsIndex];
+        var id = User.Instance.TodayStudyingWordIds[User.Instance.TodayStudyingWordsIndex];
         SetWordData(id);
     }
 
@@ -44,9 +42,15 @@ public class StudyPanel : MonoBehaviour
         }
     }
 
-    public void OnBackgroundButtonClick()
+    public void OnPreviousButtonClick()
     {
-        RequestSender.Instance.Send<StudyWordRequest>()
-            .SetOnCompleteAction(SetNextWord);
+        NewRequestSender.Instance.MoveToPreviousWord();
+        UpdateWord();
+    }
+
+    public void OnNextButtonClick()
+    {
+        NewRequestSender.Instance.MoveToNextWord();
+        UpdateWord();
     }
 }
