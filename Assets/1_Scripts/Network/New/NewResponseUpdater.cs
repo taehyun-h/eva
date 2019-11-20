@@ -14,4 +14,14 @@ public class NewResponseUpdater : Singleton<NewResponseUpdater>
     {
         User.Instance.OnUpdate(response);
     }
+
+    public void OnUpdate(Service.Test.IKnowResponse response)
+    {
+        User.Instance.OnUpdate(response);
+    }
+
+    public void OnUpdate(Service.Test.IDontKnowResponse response)
+    {
+        User.Instance.OnUpdate(response);
+    }
 }

@@ -17,6 +17,16 @@ public partial class User
         TodayStudyingWordsIndex = response.NewIndex;
     }
 
+    public void OnUpdate(Service.Test.IKnowResponse response)
+    {
+        TodayTestingWordsIndex = response.NewIndex;
+    }
+
+    public void OnUpdate(Service.Test.IDontKnowResponse response)
+    {
+        TodayTestingWordsIndex = response.NewIndex;
+    }
+
     private void OnUpdate(Service.Entities.User pbObject)
     {
         Id = pbObject.Id;

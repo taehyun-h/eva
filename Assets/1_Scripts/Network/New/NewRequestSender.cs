@@ -58,4 +58,36 @@ public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
 
         InputBlocker.Instance.UnblockInput();
     }
+
+    public void IKnow()
+    {
+        InputBlocker.Instance.BlockInput();
+
+        var client = new Service.Test.Test.TestClient(_channel);
+        var request = new Service.Test.IKnowRequest
+        {
+            UserId = User.Instance.Id,
+        };
+
+        var response = client.IKnow(request);
+        NewResponseUpdater.Instance.OnUpdate(response);
+
+        InputBlocker.Instance.UnblockInput();
+    }
+
+    public void IDontKnow()
+    {
+        InputBlocker.Instance.BlockInput();
+
+        var client = new Service.Test.Test.TestClient(_channel);
+        var request = new Service.Test.IDontKnowRequest
+        {
+            UserId = User.Instance.Id,
+        };
+
+        var response = client.IDontKnow(request);
+        NewResponseUpdater.Instance.OnUpdate(response);
+
+        InputBlocker.Instance.UnblockInput();
+    }
 }

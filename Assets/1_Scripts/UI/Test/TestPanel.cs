@@ -16,7 +16,7 @@ public class TestPanel : MonoBehaviour
     [SerializeField] private GameObject _iKnowButton;
     [SerializeField] private GameObject _iDontKnowButton;
 
-    private List<int> TodayTestWords => User.Instance.TodayTestWords.TryGetValueOrDefaultValue(User.Instance.TodayStudyDate);
+    private List<int> TodayTestingWords => User.Instance.TodayTestingWordIds;
 
     public void Show()
     {
@@ -25,7 +25,7 @@ public class TestPanel : MonoBehaviour
 
     private void SetNextWord()
     {
-        if (TodayTestWords == null)
+        if (TodayTestingWords == null || TodayTestingWords.Count == 0)
         {
             _done.SetActive(true);
             _test.SetActive(false);
@@ -52,14 +52,12 @@ public class TestPanel : MonoBehaviour
 
     private void SetWordIndex()
     {
-        var todayTestWords = User.Instance.TodayTestWords[User.Instance.TodayStudyDate];
-        _index.text = $"{User.Instance.TodayTestWordsIndex + 1} / {todayTestWords.Count}";
+        _index.text = $"{User.Instance.TodayTestingWordsIndex + 1} / {TodayTestingWords.Count}";
     }
 
     private void SetWordData()
     {
-        var todayTestWords = User.Instance.TodayTestWords[User.Instance.TodayStudyDate];
-        var id = todayTestWords[User.Instance.TodayTestWordsIndex];
+        var id = TodayTestingWords[User.Instance.TodayTestingWordsIndex];
         var word = StaticData.Instance.GetWord(id);
         _word.text = word.Spelling;
 
@@ -91,13 +89,13 @@ public class TestPanel : MonoBehaviour
 
     public void OnIKnowButtonClick()
     {
-        RequestSender.Instance.Send<TestWordIKnowRequest>()
-            .SetOnCompleteAction(SetNextWord);
+        NewRequestSender.Instance.IKnow();
+        SetNextWord();
     }
 
     public void OnIDontKnowButtonClick()
     {
-        RequestSender.Instance.Send<TestWordIDontKnowRequest>()
-            .SetOnCompleteAction(SetNextWord);
+        NewRequestSender.Instance.IDontKnow();
+        SetNextWord();
     }
 }
