@@ -17,14 +17,14 @@ public class TitlePanel : MonoBehaviour
 
     private void UpdateStudyButton()
     {
-        var todayStudyWords = User.Instance.TodayStudyWords.TryGetValueOrDefaultValue(User.Instance.TodayStudyDate);
-        _study.color = todayStudyWords == null || todayStudyWords.Count == 0 ? Color.white : Color.yellow;
+        var words = User.Instance.TodayStudyingWordIds;
+        _study.color = words == null || words.Count == 0 ? Color.white : Color.yellow;
     }
 
     private void UpdateTestButton()
     {
-        var todayTestWords = User.Instance.TodayTestWords.TryGetValueOrDefaultValue(User.Instance.TodayStudyDate);
-        _test.color = todayTestWords == null || todayTestWords.Count == 0 ? Color.white : Color.yellow;
+        var words = User.Instance.TodayTestingWordIds;
+        _test.color = words == null || words.Count == 0 ? Color.white : Color.yellow;
     }
 
     public void OnStudyButtonClick()

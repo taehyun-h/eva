@@ -13,6 +13,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
         base.Init();
 
         InitUser();
+        ShowTitlePanel();
     }
 
     private void InitUser()
