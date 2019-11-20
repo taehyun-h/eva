@@ -1,4 +1,4 @@
-public class NewResponseUpdater : Singleton<NewResponseUpdater>
+public class ResponseUpdater : Singleton<ResponseUpdater>
 {
     public void OnUpdate(Service.Sign.SignInResponse response)
     {

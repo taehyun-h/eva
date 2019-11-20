@@ -1,6 +1,6 @@
 using Grpc.Core;
 
-public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
+public class RequestSender : SingletonMonoBehaviour<RequestSender>
 {
     private const string ServerUrl = "127.0.0.1:50051";
 
@@ -22,7 +22,7 @@ public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
         };
 
         var response = client.SignIn(request);
-        NewResponseUpdater.Instance.OnUpdate(response);
+        ResponseUpdater.Instance.OnUpdate(response);
 
         InputBlocker.Instance.UnblockInput();
     }
@@ -38,7 +38,7 @@ public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
         };
 
         var response = client.MoveToPreviousWord(request);
-        NewResponseUpdater.Instance.OnUpdate(response);
+        ResponseUpdater.Instance.OnUpdate(response);
 
         InputBlocker.Instance.UnblockInput();
     }
@@ -54,7 +54,7 @@ public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
         };
 
         var response = client.MoveToNextWord(request);
-        NewResponseUpdater.Instance.OnUpdate(response);
+        ResponseUpdater.Instance.OnUpdate(response);
 
         InputBlocker.Instance.UnblockInput();
     }
@@ -70,7 +70,7 @@ public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
         };
 
         var response = client.IKnow(request);
-        NewResponseUpdater.Instance.OnUpdate(response);
+        ResponseUpdater.Instance.OnUpdate(response);
 
         InputBlocker.Instance.UnblockInput();
     }
@@ -86,7 +86,7 @@ public class NewRequestSender : SingletonMonoBehaviour<NewRequestSender>
         };
 
         var response = client.IDontKnow(request);
-        NewResponseUpdater.Instance.OnUpdate(response);
+        ResponseUpdater.Instance.OnUpdate(response);
 
         InputBlocker.Instance.UnblockInput();
     }

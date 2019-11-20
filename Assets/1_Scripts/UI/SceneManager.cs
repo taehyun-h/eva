@@ -18,7 +18,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
 
     private void InitUser()
     {
-        NewRequestSender.Instance.SignIn("taehyun");
+        RequestSender.Instance.SignIn("taehyun");
     }
 
     #region UI

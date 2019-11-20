@@ -44,13 +44,13 @@ public class StudyPanel : MonoBehaviour
 
     public void OnPreviousButtonClick()
     {
-        NewRequestSender.Instance.MoveToPreviousWord();
+        RequestSender.Instance.MoveToPreviousWord();
         UpdateWord();
     }
 
     public void OnNextButtonClick()
     {
-        NewRequestSender.Instance.MoveToNextWord();
+        RequestSender.Instance.MoveToNextWord();
         UpdateWord();
     }
 }

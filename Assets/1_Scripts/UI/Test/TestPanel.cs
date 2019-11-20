@@ -89,13 +89,13 @@ public class TestPanel : MonoBehaviour
 
     public void OnIKnowButtonClick()
     {
-        NewRequestSender.Instance.IKnow();
+        RequestSender.Instance.IKnow();
         SetNextWord();
     }
 
     public void OnIDontKnowButtonClick()
     {
-        NewRequestSender.Instance.IDontKnow();
+        RequestSender.Instance.IDontKnow();
         SetNextWord();
     }
 }
